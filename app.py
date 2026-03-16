@@ -24,7 +24,6 @@ try:
     pipe = pickle.load(open("pipe.pkl","rb"))
 except Exception as e:
     st.error(f"Model loading error: {e}")
-    st.stop()
 
 
 st.title('IPL Win Predictor')
