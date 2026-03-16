@@ -19,13 +19,7 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah', 'Mohali', 'Bengaluru']
 
-
-if os.path.exists("pipe.pkl"):
-    pipe = pickle.load(open("pipe.pkl","rb"))
-else:
-    st.error("Model file pipe.pkl not found")
- 
-
+pipe = pickle.load(open('pipe.pkl','rb'))
 st.title('IPL Win Predictor')
 
 col1, col2 = st.columns(2)
