@@ -19,7 +19,13 @@ cities = ['Hyderabad', 'Bangalore', 'Mumbai', 'Indore', 'Kolkata', 'Delhi',
        'Visakhapatnam', 'Pune', 'Raipur', 'Ranchi', 'Abu Dhabi',
        'Sharjah', 'Mohali', 'Bengaluru']
 
-pipe = pickle.load(open('pipe.pkl','rb'))
+
+try:
+    pipe = pickle.load(open("pipe.pkl","rb"))
+except Exception as e:
+    st.error(f"Model loading error: {e}")
+
+
 st.title('IPL Win Predictor')
 
 col1, col2 = st.columns(2)
